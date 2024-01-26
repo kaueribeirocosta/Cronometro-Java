@@ -2,6 +2,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
+
 public class Cronometro implements ActionListener {
     ImageIcon logo = new ImageIcon(getClass().getClassLoader().getResource("Imagem/icon.png"));
     JFrame janelaCronometro = new JFrame();
@@ -42,7 +43,7 @@ public class Cronometro implements ActionListener {
         contador.setBounds(100, 100, 200, 100);
         contador.setFont(new Font("Verdana", Font.PLAIN, 35));
         contador.setBorder(BorderFactory.createBevelBorder(1));
-        contador.setOpaque(true);
+        contador.setOpaque(false);
         contador.setHorizontalAlignment(JTextField.CENTER);
 
         startButton.setBounds(100, 200, 100, 50);
@@ -103,10 +104,10 @@ public class Cronometro implements ActionListener {
 
     void Reset() {
         timer.stop();
-        int milissegundos = 0;
-        int segundos = 0;
-        int minutos = 0;
-        int horas = 0;
+        milissegundos = 0;
+        segundos = 0;
+        minutos = 0;
+        horas = 0;
         segundosTexto = String.format("%02d", segundos);
         minutosTexto = String.format("%02d", minutos);
         horasTexto = String.format("%02d", horas);
